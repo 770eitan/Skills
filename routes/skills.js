@@ -1,6 +1,7 @@
 import { Router } from 'express'
 // import the Todo data
 import * as skillsCtrl from '../controllers/skills.js'
+import * as skillsDB from "../data/skills-db.js"
 
 
 const router = Router()
@@ -14,6 +15,7 @@ router.get('/new', skillsCtrl.new)
 router.get("/:id", skillsCtrl.show)
 
 
-router.post('/', skillsCtrl.create)  // add this route
+router.post('/', skillsCtrl.create)  
 router.delete('/:id', skillsCtrl.delete)
+
 export {router}
